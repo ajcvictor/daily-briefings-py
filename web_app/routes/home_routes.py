@@ -1,5 +1,7 @@
 # web_app/routes/home_routes.py
 
+# web_app/routes/home_routes.py
+
 from flask import Blueprint, request, render_template
 
 home_routes = Blueprint("home_routes", __name__)
@@ -17,7 +19,11 @@ def about():
     return "About Me"
     #return render_template("about.html")
 
-    @home_routes.route("/hello")
+
+
+# ...
+
+@home_routes.route("/hello")
 def hello_world():
     print("HELLO...", dict(request.args))
     # NOTE: `request.args` is dict-like, so below we're using the dictionary's `get()` method,
